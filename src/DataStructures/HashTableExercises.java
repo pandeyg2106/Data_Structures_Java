@@ -1,6 +1,6 @@
 package DataStructures;
 
-import java.util.HashMap;
+import  java.util.HashMap;
 import java.util.Map;
 
 public class HashTableExercises {
@@ -15,6 +15,7 @@ public class HashTableExercises {
         System.out.println(map);
         int max = -1;
         int result = numbers[0];
+
         for (var k : map.entrySet()) {
             if (k.getValue() > max) {
                 max = k.getValue();
