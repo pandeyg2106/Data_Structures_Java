@@ -3,25 +3,19 @@ package DataStructures;
 
 public class Main {
     public static void main(String[] args){
-        Tree tree = new Tree();
-        tree.insert(7);
-        tree.insert(4);
-        tree.insert(2);
-        tree.insert(6);
-        tree.insert(9);
-        tree.insert(8);
-        tree.insert(10);
-        System.out.println(tree.areSiblings(4,9));
 
+        LinkedList list =  new LinkedList();
+        list.addLast(0);
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.addLast(5);
+        list.addLast(6);
+        list.addLast(7);
+        list.addLast(8);
+        list.addLast(9);
 
-        /*
-        var inputList = list.createWithLoop();
-        System.out.println(inputList.hasLoop());*/
- /*       list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
-        list.addLast(40);
-        list.addLast(50);*/
 
 //        System.out.println(list.printMiddle());
 

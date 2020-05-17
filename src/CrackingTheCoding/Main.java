@@ -1,9 +1,6 @@
 package CrackingTheCoding;
 
-import Algorithms.SmallestDifference;
-import Algorithms.ThreeNumberSum;
-import Codility.Palladium;
-import Codility.Ruthenium2019;
+import Algorithms.Dynamic_Programming.SmallestDifference;
 
 import java.util.*;
 

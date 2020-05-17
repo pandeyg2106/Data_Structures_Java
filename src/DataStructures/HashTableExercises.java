@@ -25,12 +25,50 @@ public class HashTableExercises {
         return result;
     }
 
+    public int levenshteinDistance(String str1, String str2) {
+        // Write your code here.
+        Map<Character,Integer> map1 = new HashMap<Character,Integer>();
+        Map<Character,Integer> map2 = new HashMap<Character,Integer>();
+        int ways = 0;
+
+        createHashTable(str1,map1);
+        createHashTable(str2,map2);
+
+        for(var k : map2.entrySet()){
+            if(!map1.containsKey(k.getKey()))
+                ways++;
+            else if(map1.get(k.getKey()) < k.getValue()){
+                int  diff = k.getValue() - map1.get(k.getKey());
+                ways += diff;
+            }
+            else if(map1.get(k.getKey()) > k.getValue()){
+                int  diff = map1.get(k.getKey()) - k.getValue();
+                ways += diff;
+            }
+
+
+        }
+
+        return ways;
+    }
+
+    public static void createHashTable(String str,Map<Character,Integer> map){
+        for(Character ch : str.toCharArray()){
+            if(map.containsKey(ch))
+                map.replace(ch,map.get(ch)+1);
+            else
+                map.put(ch,1);
+        }
+    }
+
+
+
 
 
     public static void main(String[] args){
         HashTableExercises obj = new HashTableExercises();
         int[] array = new int[]{1, 2, 2, 3, 3, 3, 4};
-        System.out.println(obj.mostFreequentNumber(array));
+        System.out.println(obj.levenshteinDistance("cereal","saturdzz"));
 
     }
 }

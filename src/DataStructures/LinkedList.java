@@ -178,6 +178,21 @@ public class LinkedList {
         }
         return a.value;
     }
+    
+
+    public void removeKthNodeFromEnd(Node head, int k) {
+        // Write your code here.
+        //To find Kth element from end, position two pointers k-1 distance apart,
+        Node a = head;
+        Node b = head;
+        for(int i = 0; i < k-1; i++)
+            b = b.next;
+        //Now we. have to remove b.
+        while(b.next != null)
+            a = a.next;
+        b = b.next;
+        a.next = b.next.next;
+    }
 
     /**
      * Has loop boolean.

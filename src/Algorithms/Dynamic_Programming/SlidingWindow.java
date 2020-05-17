@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.Dynamic_Programming;
 
 public class SlidingWindow {
 
